@@ -5,7 +5,10 @@
     </head>
     <body>
         <h1>Copy + Paste Link</h1>
+        <meta charset="UTF-8">
+     <h2>Open Site in about:blank</h2>
         <script>
+            //CUSTOM ABOUT BLANKS
         function create() {
             var url = document.getElementById('input').value;
             var win = window.open();
@@ -21,8 +24,22 @@
         }
         </script>
         <input type="text" value="" placeholder="https://www.crazygames.com" id='input' autofocus>
-        <button onclick='create()'>Create!</button>
-        <h2>Other Games</h2>
+        <button onclick='create()'>Custom URL New tab</button>
+        <button onclick="openGame()">This Into New Tab</button>
+    <script>
+        //open into new tab
+        function openGame() {
+            var win = window.open()
+            var url = "https://skibjeffbob.github.io/AboutBlanker/"
+            var iframe = win.document.createElement('iframe')
+            iframe.style.width = "100%";
+            iframe.style.height = "100%";
+            iframe.style.border = "none";
+            iframe.src = url
+            win.document.body.appendChild(iframe)
+        }
+    </script>
+    <h2>Other Games</h2>
         <nav>
     <ul>
         <li><a href="RooftopSnipers.html">Rooftop Snipers</a></li>
