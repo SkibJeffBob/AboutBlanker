@@ -23,15 +23,42 @@
             iframe.src = url;
             win.document.body.appendChild(iframe);
         }
+            <style>
+  .btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Prevents buttons from stretching full width */
+    gap: 12px; /* Adjust spacing here */
+  }
+</style>
+
+<div class="btn-container">
+  <button onclick="openGame()">About Blank Cloak</button>
+  <input type="text" value="" placeholder="https:./vvid.pages.dev" id="input" autofocus>
+  <button style="padding: 12px 24px; font-size: 18px;" onclick="create()">Custom URL Cloak</button>
+  <button style="padding: 12px 24px; font-size: 18px;" onclick="openvvid()">Shows + Movies</button>
+</div>
         </script>
         <button onclick="openGame()">About Blank Cloak</button>
         <input type="text" value="" placeholder="https:./vvid.pages.dev" id='input' autofocus>
         <button style="padding: 12px 24px; font-size: 18px;" onclick='create()'>Custom URL Cloak</button>
+        <button style="padding: 12px 24px; font-size: 18px;" onclick='openvvid()'>Shows + Movies</button>
     <script>
         //open into new tab
         function openGame() {
             var win = window.open()
             var url = "https://skibjeffbob.github.io/AboutBlanker/"
+            var iframe = win.document.createElement('iframe')
+            iframe.style.width = "100%";
+            iframe.style.height = "100%";
+            iframe.style.border = "none";
+            iframe.src = url
+            win.document.body.appendChild(iframe)
+        }
+        //open vvid
+        function openvvid() {
+            var win = window.open()
+            var url = "https://vvid.pages.dev"
             var iframe = win.document.createElement('iframe')
             iframe.style.width = "100%";
             iframe.style.height = "100%";
