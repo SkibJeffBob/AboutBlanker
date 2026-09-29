@@ -36,13 +36,11 @@
   <button onclick="openGame()">About Blank Cloak</button>
   <input type="text" value="" placeholder="https:./vvid.pages.dev" id="input" autofocus>
   <button style="padding: 12px 24px; font-size: 18px;" onclick="create()">Custom URL Cloak</button>
-  <button style="padding: 12px 24px; font-size: 18px;" onclick="openvvid()">Shows + Movies</button>
 </div>
         </script>
         <button onclick="openGame()">About Blank Cloak</button>
         <input type="text" value="" placeholder="https:./vvid.pages.dev" id='input' autofocus>
         <button style="padding: 12px 24px; font-size: 18px;" onclick='create()'>Custom URL Cloak</button>
-        <button style="padding: 12px 24px; font-size: 18px;" onclick='openvvid()'>Shows + Movies</button>
     <script>
         //open into new tab
         function openGame() {
@@ -56,16 +54,6 @@
             win.document.body.appendChild(iframe)
         }
         //open vvid
-        function openvvid() {
-            var win = window.open()
-            var url = "https://vvid.pages.dev"
-            var iframe = win.document.createElement('iframe')
-            iframe.style.width = "100%";
-            iframe.style.height = "100%";
-            iframe.style.border = "none";
-            iframe.src = url
-            win.document.body.appendChild(iframe)
-        }
     </script>
     <h2>Other Games</h2>
         <nav>
